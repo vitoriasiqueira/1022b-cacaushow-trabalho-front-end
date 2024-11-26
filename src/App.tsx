@@ -46,31 +46,31 @@ function App() {
   const [promocoes, setPromocoes] = useState<PromocoesType[]>([])
   //useEffect(O Que fazer, Quando fazer)
   useEffect(()=>{
-    fetch("http://localhost:8000/produtos")
+    fetch("https://one022b-cacaushow-trabalho.onrender.com/chocolates")
     .then(resposta=>resposta.json())
     .then(dados=>setChocolates(dados))
   },[]); 
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho.onrender.com/cliente")
     .then(resposta=>resposta.json())
     .then(dados=>setCliente(dados))
   },[])
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho.onrender.com/pagamento")
     .then(resposta=>resposta.json())
     .then(dados=>setPagamento(dados))
   },[])
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho.onrender.com/estoque")
     .then(resposta=>resposta.json())
     .then(dados=>setEstoque(dados))
   },[])
 
   useEffect(()=>{
-    fetch("https://one022b-marketplace-b55e.onrender.com/usuarios")
+    fetch("https://one022b-cacaushow-trabalho.onrender.com/promocoes")
     .then(resposta=>resposta.json())
     .then(dados=>setPromocoes(dados))
   },[])

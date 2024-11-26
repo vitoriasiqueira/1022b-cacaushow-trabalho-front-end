@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function ListagemPromocoes (){
+export default function CadastroPromocoes (){
     const navigate = useNavigate();
     const [idPromocao,setIdpromocao] = useState("")
     const [titulo,setTitulo] = useState("")

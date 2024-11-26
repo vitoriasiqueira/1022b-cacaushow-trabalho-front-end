@@ -1,7 +1,7 @@
 import { FormEvent, useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function RegistroPagamento(){
+export default function CadastroPagamento(){
     const navigate = useNavigate();
     const [idpagamento,setIdpagamento] = useState("")
     const [formapag,setFormapag] = useState("")

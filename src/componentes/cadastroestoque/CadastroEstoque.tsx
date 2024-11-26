@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function ControleEstoque (){
+export default function CadastroEstoque (){
     const navigate = useNavigate();
     const [itemId,setItemid] = useState("")
     const [nomeProduto,setNomeProduto] = useState("")
