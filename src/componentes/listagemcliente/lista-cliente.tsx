@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 type ClienteType = {
     clienteId:number,
     nome:string,
@@ -14,6 +16,7 @@ export default function ListaCliente() {
       },[])
     return (
         <>
+         <Link to={"/cadastro-cliente"}>Link Cadastro Cliente</Link>
             {cliente.map(clien => {
                 return (
                     <div key={clien.clienteId}className='cliente-item'>

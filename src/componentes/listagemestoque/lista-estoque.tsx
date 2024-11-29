@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 type EstoqueType = {
     itemId:number,
     nomeProduto:string,
@@ -15,6 +17,7 @@ export default function ListaEstoque() {
       },[])
     return (
         <>
+        <Link to={"/gestao-estoque"}>Link Gestão Estoque</Link>
             {estoque.map(esto => {
                 return (
                     <div key={esto.itemId}className='estoque-item'>

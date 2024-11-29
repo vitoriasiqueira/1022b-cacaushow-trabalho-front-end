@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 type PagamentoType = {
     Idpagamento:number,
     formapag:string,
@@ -14,6 +16,7 @@ type PagamentoType = {
       },[])
       return (
         <>
+         <Link to={"/cadastro-pagamento"}>Link Cadastro Pagamentos</Link>
             {pagamento.map(paga => {
                 return (
                     <div key={paga.Idpagamento}className='pagamento-item'>

@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function CadastroEstoque (){
+export default function GestaoEstoque (){
     const navigate = useNavigate();
     const [itemId,setItemid] = useState("")
     const [nomeProduto,setNomeProduto] = useState("")
@@ -10,7 +10,7 @@ export default function CadastroEstoque (){
     
     function handleForm(event:FormEvent){
         event.preventDefault();
-        console.log("Tentei atualizar Estoque");
+        console.log("Gestão do Estoque");
         const estoque = {
             itemId: itemId,
             nomeProduto: nomeProduto,
@@ -48,7 +48,7 @@ export default function CadastroEstoque (){
 
     return(
         <>
-        <h1>Tela Atualizar Estoque</h1>
+        <h1>Tela Gerenciar Estoque</h1>
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="itemid">itemid</label>
@@ -67,7 +67,7 @@ export default function CadastroEstoque (){
                 <input type="text" name="localizacao" onChange={handleLocalizacao}/>
                 </div>
                 <div>
-                    <input type="submit" value="Atualizar"/>
+                    <input type="submit" value="Gerenciar"/>
                 </div>
             </form>
         </>

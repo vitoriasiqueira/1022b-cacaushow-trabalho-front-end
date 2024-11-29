@@ -1,8 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ad7b67b2;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header, footer {
+  background: #27120ed7;
+  color: rgb(235, 143, 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+  background: #27120ed7;
+}
+
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 12vh auto 12vh auto; 
   text-align: center;
+}
+
+main {
+  height: calc(100vh - 24vh); 
+  background: white;
 }
 
 .logo {
@@ -11,11 +47,13 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #d761fbaa);
 }
 
 @keyframes logo-spin {

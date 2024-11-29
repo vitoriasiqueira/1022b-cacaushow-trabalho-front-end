@@ -10,7 +10,7 @@ export default function CadastroPagamento(){
 
     function handleForm(event:FormEvent){
         event.preventDefault();
-        console.log("Tentei registrar pagamentos");
+        console.log("Tentei cadastrar pagamentos");
         const pagamento = {
             idpagamento: idpagamento,
             formapag: formapag,
@@ -25,11 +25,11 @@ export default function CadastroPagamento(){
             body: JSON.stringify(pagamento)
         }).then(response => {
             if(response.status === 200){
-                alert("Pagamento registrado com sucesso")
+                alert("Pagamento cadastrado com sucesso")
                 navigate("/")
             }
             else{
-                alert("Erro ao registrar pagamento")
+                alert("Erro ao cadastrar pagamento")
             }
         })
     }
@@ -47,7 +47,7 @@ export default function CadastroPagamento(){
     }
     return(
         <>
-            <h1>Tela Registro Pagamento</h1>
+            <h1>Tela Cadastro Pagamento</h1>
             <form onSubmit={handleForm}>
                 <div>
                     <label htmlFor="idpagamento">idpagamento</label>
@@ -66,7 +66,7 @@ export default function CadastroPagamento(){
                 <input type="text" name="valor" onChange={handleValor} />
                 </div>
                 <div>
-                    <input type="submit" value="Registrar"/>
+                    <input type="submit" value="Cadastrar"/>
                 </div>
             </form>
         </>

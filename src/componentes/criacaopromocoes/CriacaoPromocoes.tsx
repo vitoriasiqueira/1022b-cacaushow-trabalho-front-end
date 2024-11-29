@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function CadastroPromocoes (){
+export default function CriacaoPromocoes (){
     const navigate = useNavigate();
     const [idPromocao,setIdpromocao] = useState("")
     const [titulo,setTitulo] = useState("")
@@ -11,7 +11,7 @@ export default function CadastroPromocoes (){
     
     function handleForm(event:FormEvent){
         event.preventDefault();
-        console.log("Listagem de Promoções");
+        console.log("Criação de Promoções");
         const promocoes = {
             idPromocao: idPromocao,
             titulo: titulo,
@@ -76,7 +76,7 @@ export default function CadastroPromocoes (){
                 <input type="text" name="cupom" onChange={handleCupom}/>
                 </div>
                 <div>
-                    <input type="submit" value="Listar"/>
+                    <input type="submit" value="Criar"/>
                 </div>
             </form>
         </>

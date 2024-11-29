@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import {Link} from "react-router-dom"
 import './App.css'
 
+
 type ChocolateType = {
   id:number,
   nome:string,
@@ -44,7 +45,7 @@ function App() {
   const [pagamento, setPagamento] = useState<PagamentoType[]>([])
   const [estoque, setEstoque] = useState<EstoqueType[]>([])
   const [promocoes, setPromocoes] = useState<PromocoesType[]>([])
-  //useEffect(O Que fazer, Quando fazer)
+
   useEffect(()=>{
     fetch("https://one022b-cacaushow-trabalho.onrender.com/chocolates")
     .then(resposta=>resposta.json())
@@ -102,25 +103,12 @@ function App() {
         )
       })}
 
-    <Link to={"/controle-estoque"}>Link Controle Estoque</Link>
+    <Link to={"/gestao-estoque"}>Link Gestão Estoque</Link>
      </div>
-     <div className='container-pagamento'>
-      {pagamento.map(paga=>{
+     <div className='container-estoque'>
+     {estoque.map(esto=>{
         return(
-          <div key={paga.Idpagamento}className='pagamento-item'>
-            <h1>{paga.formapag}</h1>
-            <p>{paga.descricao}</p>
-            <p>{paga.valor}</p>
-          </div>
-        )
-      })}
-
-      <Link to={"/registro-pagamento"}>Link Registrar Pagamentos</Link>
-       </div>
-       <div className='container-estoque'>
-      {estoque.map(esto=>{
-        return(
-          <div key={esto.itemId}className='estoque-item'>
+          <div key={esto.itemId}className='pagamento-item'>
             <h1>{esto.nomeProduto}</h1>
             <p>{esto.quantidade}</p>
             <p>{esto.localizacao}</p>
@@ -128,7 +116,21 @@ function App() {
         )
       })}
 
-      <Link to={"/listagem-promocoes"}>Link Listar Promoções</Link>
+
+      <Link to={"/cadastro-pagamento"}>Link Cadastro Pagamentos</Link>
+       </div>
+       <div className='container-pagamento'>
+       {pagamento.map(paga=>{
+  return(
+    <div key={paga.Idpagamento}className='estoque-item'>
+      <h1>{paga.formapag}</h1>
+      <p>{paga.descricao}</p>
+      <p>{paga.valor}</p>
+    </div>
+  )
+})}
+
+      <Link to={"/criacao-promocoes"}>Link Criação Promoções</Link>
        </div>
        <div className='container-promocoes'>
       {promocoes.map(promo=>{
@@ -148,3 +150,4 @@ function App() {
 }
 
 export default App
+

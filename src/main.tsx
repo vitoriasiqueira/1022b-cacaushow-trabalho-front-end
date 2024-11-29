@@ -8,9 +8,10 @@ import {
 } from "react-router-dom";
 import CadastroChocolate from './componentes/cadastrochocolate/CadastroChocolate.tsx';
 import CadastroCliente from './componentes/cadastrocliente/CadastroCliente.tsx';
-import ControleEstoque from './componentes/controleestoque/ControleEstoque.tsx';
-import ListagemPromocoes from './componentes/listagempromocoes/ListagemPromocoes.tsx';
-import RegistroPagamento from './componentes/registropagamento/RegistroPagamento.tsx';
+import CadastroPagamento from './componentes/cadastropagamento/CadastroPagamento.tsx';
+import CriacaoPromocoes from './componentes/criacaopromocoes/CriacaoPromocoes.tsx';
+import GestaoEstoque from './componentes/gestaoestoque/GestaoEstoque.tsx';
+
 
 const router = createBrowserRouter([
   {
@@ -26,17 +27,17 @@ const router = createBrowserRouter([
     element:  <CadastroCliente/>,
   },
   {
-    path: "/controle-estoque",
-    element:  <ControleEstoque/>,
+    path: "/cadastro-pagamento",
+    element: <CadastroPagamento/>,
   },
   {
-    path: "/listagem-promocoes",
-    element:  <ListagemPromocoes/>,
+    path: "/criacao-promocoes",
+    element: <CriacaoPromocoes/>,
   },
   {
-    path: "/registro-pagamento",
-    element:  <RegistroPagamento/>,
-  }
+    path: "/gestao-estoque",
+    element: <GestaoEstoque/>,
+  },
 ]);
 
 createRoot(document.getElementById('root')!).render(
