@@ -11,12 +11,14 @@ import CadastroCliente from './componentes/cadastrocliente/CadastroCliente.tsx';
 import CadastroPagamento from './componentes/cadastropagamento/CadastroPagamento.tsx';
 import CriacaoPromocoes from './componentes/criacaopromocoes/CriacaoPromocoes.tsx';
 import GestaoEstoque from './componentes/gestaoestoque/GestaoEstoque.tsx';
+import Header from './componentes/header.tsx';
+import Footer from './componentes/footer.tsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:  <App />,
+    element:<><Header/> <App/> <Footer/></>,
   },
   {
     path: "/cadastro-chocolate",

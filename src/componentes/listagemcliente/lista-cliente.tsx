@@ -16,7 +16,7 @@ export default function ListaCliente() {
       },[])
     return (
         <>
-         <Link to={"/cadastro-cliente"}>Link Cadastro Cliente</Link>
+         <Link to={"/cadastro-cliente"}>Clientes</Link>
             {cliente.map(clien => {
                 return (
                     <div key={clien.clienteId}className='cliente-item'>

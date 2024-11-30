@@ -19,7 +19,7 @@ export default function ListaChocolate() {
 
     return (
         <>
-          <Link to={"/cadastro-chocolate"}>Link Cadastro Chocolate</Link>
+          <Link to={"/cadastro-chocolate"}>Chocolates</Link>
             {chocolates.map(choco => {
                 return (
                     <div key={choco.id} className='chocolate-item'>
