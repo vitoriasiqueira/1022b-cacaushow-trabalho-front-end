@@ -11,7 +11,7 @@ export default function CriacaoPromocoes (){
     
     function handleForm(event:FormEvent){
         event.preventDefault();
-        console.log("Criação de Promoções");
+        console.log("Criacao de Promoções");
         const promocoes = {
             idPromocao: idPromocao,
             titulo: titulo,
@@ -56,23 +56,23 @@ export default function CriacaoPromocoes (){
         <h1>Tela de Promoções</h1>
         <form onSubmit={handleForm}>
             <div>
-                <label htmlFor="itemid">itemid</label>
+                <label htmlFor="itemid">Item ID: </label>
                 <input type="text" name="Itemid" onChange={handleIdpromocao}/>
             </div>
             <div>
-                <label htmlFor="nomeproduto">nomeproduto</label>
+                <label htmlFor="nomeproduto">Nome Produto: </label>
                 <input type="text" name="nomeproduto" onChange={handleTitulo}/>
             </div>
             <div>
-                <label htmlFor="descricao">descricao</label>
+                <label htmlFor="descricao">Descrição: </label>
                 <input type="text" name="descricao" onChange={handleDescricao}/>
             </div>
             <div>
-                <label htmlFor="valiade">validade</label>
+                <label htmlFor="valiade">Validade: </label>
                 <input type="text" name="validade" onChange={handleValidade}/>
             </div>
             <div>
-                <label htmlFor="cupom">cupom</label>
+                <label htmlFor="cupom">Cupom: </label>
                 <input type="text" name="cupom" onChange={handleCupom}/>
                 </div>
                 <div>

@@ -51,19 +51,19 @@ export default function GestaoEstoque (){
         <h1>Tela Gerenciar Estoque</h1>
         <form onSubmit={handleForm}>
             <div>
-                <label htmlFor="itemid">itemid</label>
+                <label htmlFor="itemid">Item ID: </label>
                 <input type="text" name="Itemid" onChange={handleItemid}/>
             </div>
             <div>
-                <label htmlFor="nomeproduto">nomeproduto</label>
+                <label htmlFor="nomeproduto">Nome do Produto: </label>
                 <input type="text" name="id" onChange={handleNomeProduto}/>
             </div>
             <div>
-                <label htmlFor="quantidade">descricao</label>
+                <label htmlFor="quantidade">Quantidade: </label>
                 <input type="text" name="quantidade" onChange={handleQuantidade}/>
             </div>
             <div>
-                <label htmlFor="localizacao">localizacao</label>
+                <label htmlFor="localizacao">Localização: </label>
                 <input type="text" name="localizacao" onChange={handleLocalizacao}/>
                 </div>
                 <div>

@@ -19,7 +19,7 @@ export default function CadastroChocolate(){
             preco: preco,
             imagem: imagem
         }
-        fetch("http://localhost:8000/chocolate",{
+        fetch("http://localhost:8000/chocolates",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -56,23 +56,23 @@ export default function CadastroChocolate(){
             <h1>Tela Cadastro Chocolates</h1>
             <form onSubmit={handleForm}>
                 <div>
-                    <label htmlFor="id">id</label>
+                    <label htmlFor="id">ID: </label>
                     <input type="text" name="id" onChange={handleId} />
                 </div>
                 <div>
-                    <label htmlFor="nome">nome</label>
+                    <label htmlFor="nome">Nome: </label>
                     <input type="text" name="nome" onChange={handleNome} />
                 </div>
                 <div>
-                    <label htmlFor="descricao">descricao</label>
+                    <label htmlFor="descricao">Descrição: </label>
                     <input type="text" name="descricao" onChange={handleDescricao} />
                 </div>
                 <div>
-                    <label htmlFor="preco">preço</label>
+                    <label htmlFor="preco">Preço: </label>
                     <input type="text" name="preco" onChange={handlePreco} />
                 </div>
                 <div>
-                    <label htmlFor="imagem">imagem</label>
+                    <label htmlFor="imagem">Imagem: </label>
                     <input type="text" name="imagem" onChange={handleImagem}/>
                 </div>
                 <div>
@@ -82,3 +82,4 @@ export default function CadastroChocolate(){
         </>
     )
 }
+

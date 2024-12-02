@@ -46,15 +46,15 @@ export default function CadastroCliente (){
         <h1>Tela Cadastro Cliente</h1>
         <form onSubmit={handleForm}>
             <div>
-                <label htmlFor="clienteid">clienteid</label>
+                <label htmlFor="clienteid">Cliente ID: </label>
                 <input type="text" name="clienteId" onChange={handleClienteId}/>
             </div>
             <div>
-                <label htmlFor="nome">nome</label>
+                <label htmlFor="nome">Nome do Cliente: </label>
                 <input type="text" name="nome" onChange={handleNome}/>
             </div>
             <div>
-                <label htmlFor="cpf">cpf</label>
+                <label htmlFor="cpf">CPF: </label>
                 <input type="text" name="cpf" onChange={handleCPF}/>
             </div>
             <div>
@@ -64,3 +64,4 @@ export default function CadastroCliente (){
         </>
     )
 }
+

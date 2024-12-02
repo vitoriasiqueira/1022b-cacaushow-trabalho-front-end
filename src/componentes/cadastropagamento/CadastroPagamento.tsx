@@ -50,19 +50,19 @@ export default function CadastroPagamento(){
             <h1>Tela Cadastro Pagamento</h1>
             <form onSubmit={handleForm}>
                 <div>
-                    <label htmlFor="idpagamento">idpagamento</label>
+                    <label htmlFor="idpagamento">ID Pagamento: </label>
                     <input type="text" name="Idpagamento" onChange={handleIdpagamento} />
                 </div>
                 <div>
-                    <label htmlFor="formapag">formapag</label>
+                    <label htmlFor="formapag">Forma de Pagamento: </label>
                     <input type="text" name="formapag" onChange={handleFormapag} />
                 </div>
                 <div>
-                    <label htmlFor="descricao">descricao</label>
+                    <label htmlFor="descricao">Descrição: </label>
                     <input type="text" name="descricao" onChange={handleDescricao} />
                 </div>
                 <div>
-                <label htmlFor="valor">valor</label>
+                <label htmlFor="valor">Valor: </label>
                 <input type="text" name="valor" onChange={handleValor} />
                 </div>
                 <div>
