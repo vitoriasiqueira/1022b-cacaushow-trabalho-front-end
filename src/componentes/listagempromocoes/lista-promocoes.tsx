@@ -12,7 +12,7 @@ export default function ListaPromocoes() {
     
     const [promocoes, setPromocoes] = useState<PromocoesType[]>([])
     useEffect(()=>{
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/promocoes")
+        fetch("https://one022b-cacaushow-trabalho.onrender.com/promocoes")
         .then(resposta=>resposta.json())
         .then(dados=>setPromocoes(dados))
       },[])

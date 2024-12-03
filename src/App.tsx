@@ -14,7 +14,7 @@ function App() {
 
   //useEffect(O Que fazer, Quando fazer)
   useEffect(()=>{
-    fetch("https://one022b-cacaushow-trabalho-p0wk.onrender.com/chocolates")
+    fetch("https://one022b-cacaushow-trabalho.onrender.com/chocolates")
     .then(resposta=>resposta.json())
     .then(dados=>setChocolates(dados))
   },[]); 

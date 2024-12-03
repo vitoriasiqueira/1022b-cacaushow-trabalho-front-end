@@ -17,7 +17,7 @@ export default function CadastroPagamento(){
             descricao: descricao,
             valor: valor
         }
-        fetch("http://localhost:8000/pagamento",{
+        fetch("https://one022b-cacaushow-trabalho.onrender.com/pagamento",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +47,7 @@ export default function CadastroPagamento(){
     }
     return(
         <>
-            <h1>Tela Cadastro Pagamento</h1>
+            <h1>Registrar Pagamento</h1>
             <form onSubmit={handleForm}>
                 <div>
                     <label htmlFor="idpagamento">ID Pagamento: </label>

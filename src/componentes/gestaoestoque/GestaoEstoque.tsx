@@ -17,7 +17,7 @@ export default function GestaoEstoque (){
             quatidade: quantidade,
             localizacao: localizacao
         }
-        fetch("http://localhost:8000/estoque",{
+        fetch("https://one022b-cacaushow-trabalho.onrender.com/estoque",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -48,7 +48,7 @@ export default function GestaoEstoque (){
 
     return(
         <>
-        <h1>Tela Gerenciar Estoque</h1>
+        <h1>Atualizar Estoque</h1>
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="itemid">Item ID: </label>
@@ -67,7 +67,7 @@ export default function GestaoEstoque (){
                 <input type="text" name="localizacao" onChange={handleLocalizacao}/>
                 </div>
                 <div>
-                    <input type="submit" value="Gerenciar"/>
+                    <input type="submit" value="Atualizar"/>
                 </div>
             </form>
         </>

@@ -19,7 +19,7 @@ export default function CriacaoPromocoes (){
             validade: validade,
             cupom: cupom
         }
-        fetch("http://localhost:8000/promocoes",{
+        fetch("https://one022b-cacaushow-trabalho.onrender.com/promocoes",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -53,7 +53,7 @@ export default function CriacaoPromocoes (){
 
     return(
         <>
-        <h1>Tela de Promoções</h1>
+        <h1>Criar Promoção</h1>
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="itemid">Item ID: </label>

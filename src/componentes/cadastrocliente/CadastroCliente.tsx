@@ -15,7 +15,7 @@ export default function CadastroCliente (){
             nome: nome,
             cpf: cpf
         }
-        fetch("http://localhost:8000/cliente",{
+        fetch("https://one022b-cacaushow-trabalho.onrender.com/cliente",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export default function CadastroCliente (){
 
     return(
         <>
-        <h1>Tela Cadastro Cliente</h1>
+        <h1>Cadastrar Cliente</h1>
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="clienteid">Cliente ID: </label>
@@ -64,4 +64,3 @@ export default function CadastroCliente (){
         </>
     )
 }
-

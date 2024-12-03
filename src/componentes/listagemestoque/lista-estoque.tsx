@@ -11,7 +11,7 @@ export default function ListaEstoque() {
     
     const [estoque, setEstoque] = useState<EstoqueType[]>([])
     useEffect(()=>{
-        fetch("https://one022b-cacaushow-trabalho-1r6f.onrender.com/estoque")
+        fetch("https://one022b-cacaushow-trabalho.onrender.com/estoque")
         .then(resposta=>resposta.json())
         .then(dados=>setEstoque(dados))
       },[])
