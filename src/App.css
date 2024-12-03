@@ -12,8 +12,8 @@ body {
 header, footer {
   background: #27120e;
   color: #eb8f06;
-  display: flex;
-  justify-content:center;
+  display: flex; 
+  justify-content: center;
   align-items: center;
   height: 11vh;
   width: 100%;
@@ -27,27 +27,16 @@ header {
 
 footer {
   bottom: 0;
-  background: #27120e;
 }
-.imagem-chocolates{
-  max-width: 250px;
-  max-height: 170px;
-  margin-top: 30px;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
 
-}
-.imagem-chocolates:hover{
-  transform: scale(1.05);
-}
 #root {
   max-width: 1280px;
-  margin: 12vh auto 12vh auto; 
+  margin: 12vh auto;
   text-align: center;
 }
 
 main {
-  height: calc(100vh - 24vh); 
+  height: calc(100vh - 24vh);
   background: white;
 }
 
