@@ -15,10 +15,9 @@ import Header from './componentes/header.tsx';
 import Footer from './componentes/footer.tsx';
 import ListaChocolate from './componentes/listagemchocolate/lista-chocolate.tsx';
 import ListaCliente from './componentes/listagemcliente/lista-cliente.tsx';
-import ListaEstoque from './componentes/listagemestoque/lista-estoque.tsx';
 import ListaPagamento from './componentes/listagempagamento/lista-pagamento.tsx';
 import ListaPromocoes from './componentes/listagempromocoes/lista-promocoes.tsx';
-
+import ListaEstoque from './componentes/listagemestoque/lista-estoque.tsx';
 
 const router = createBrowserRouter([
   {
@@ -30,40 +29,40 @@ const router = createBrowserRouter([
     element:  <><Header/> <CadastroChocolate/> <Footer/></>,
   },
   {
+    path: "/lista-chocolate",
+    element:  <><Header/> <ListaChocolate/> <Footer/></>,
+  },
+  {
     path: "/cadastro-cliente",
     element:  <><Header/> <CadastroCliente/> <Footer/></>,
+  },
+  {
+    path: "/lista-cliente",
+    element:  <><Header/> <ListaCliente/> <Footer/></>,
   },
   {
     path: "/cadastro-pagamento",
     element: <><Header/> <CadastroPagamento/> <Footer/></>,
   },
   {
+    path: "/lista-pagamento",
+    element:  <><Header/> <ListaPagamento/> <Footer/></>,
+  },
+  {
     path: "/criacao-promocoes",
     element: <><Header/> <CriacaoPromocoes/> <Footer/></>,
+  },
+  {
+    path: "/lista-promocoes",
+    element:  <><Header/> <ListaPromocoes/> <Footer/></>,
   },
   {
     path: "/gestao-estoque",
     element: <><Header/> <GestaoEstoque/> <Footer/></>,
   },
   {
-    path: "/listagem-chocolate",
-    element: <><Header/> <ListaChocolate/> <Footer/></>,
-  },
-  {
-    path: "/listagem-cliente",
-    element: <><Header/> <ListaCliente/> <Footer/></>,
-  },
-  {
-    path: "/listagem-estoque",
+    path: "/lista-estoque",
     element: <><Header/> <ListaEstoque/> <Footer/></>,
-  },
-  {
-    path: "/listagem-pagamento",
-    element: <><Header/> <ListaPagamento/> <Footer/></>,
-  },
-  {
-    path: "/listagem-promocoes",
-    element: <><Header/> <ListaPromocoes/> <Footer/></>,
   },
 ]);
 

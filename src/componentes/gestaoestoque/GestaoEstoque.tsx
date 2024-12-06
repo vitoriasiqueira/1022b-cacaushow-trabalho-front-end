@@ -26,7 +26,7 @@ export default function GestaoEstoque (){
         }).then(response => {
             if(response.status === 200){
                 alert("Estoque atualizado com sucesso")
-                navigate("/")
+                navigate("/lista-estoque")
             }
             else{
                 alert("Erro ao atualizar o Estoque")

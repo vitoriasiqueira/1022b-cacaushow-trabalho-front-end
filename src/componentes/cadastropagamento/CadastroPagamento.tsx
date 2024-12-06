@@ -26,7 +26,7 @@ export default function CadastroPagamento(){
         }).then(response => {
             if(response.status === 200){
                 alert("Pagamento cadastrado com sucesso")
-                navigate("/")
+                navigate("/lista-pagamento")
             }
             else{
                 alert("Erro ao cadastrar pagamento")
@@ -36,7 +36,7 @@ export default function CadastroPagamento(){
     function handleIdpagamento(event:ChangeEvent<HTMLInputElement>){
         setIdpagamento(event.target.value)
     }
-    function handleFormapag(event:ChangeEvent<HTMLInputElement>){
+    function handleFormapag(event:ChangeEvent<HTMLSelectElement>){
         setFormapag(event.target.value)
     }
     function handleDescricao(event:ChangeEvent<HTMLInputElement>){
@@ -55,18 +55,23 @@ export default function CadastroPagamento(){
                 </div>
                 <div>
                     <label htmlFor="formapag">Forma de Pagamento: </label>
-                    <input type="text" name="formapag" onChange={handleFormapag} />
+                    <select name="formapag" onChange={handleFormapag}>
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Debito">Débito</option>
+                        <option value="Credito">Crédito</option>
+                        <option value="Pix">Pix</option>
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="descricao">Descrição: </label>
                     <input type="text" name="descricao" onChange={handleDescricao} />
                 </div>
                 <div>
-                <label htmlFor="valor">Valor: </label>
-                <input type="text" name="valor" onChange={handleValor} />
+                    <label htmlFor="valor">Valor: </label>
+                    <input type="text" name="valor" onChange={handleValor} />
                 </div>
                 <div>
-                    <input type="submit" value="Cadastrar"/>
+                    <input type="submit" value="Cadastrar" />
                 </div>
             </form>
         </>

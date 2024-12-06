@@ -19,6 +19,7 @@ export default function CadastroChocolate(){
             preco: preco,
             imagem: imagem
         }
+        console.log(chocolate)
         fetch("https://one022b-cacaushow-trabalho.onrender.com/chocolates",{
             method: "POST",
             headers: {

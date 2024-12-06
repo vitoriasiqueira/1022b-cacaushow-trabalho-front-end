@@ -5,15 +5,15 @@
 }
 
 body {
-  background-color: #d16435b0;
+  background-color: #a3451cda;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header, footer {
   background: #27120e;
-  color: #eb8f06;
+  color: rgb(235, 143, 6);
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   height: 11vh;
   width: 100%;
@@ -32,12 +32,12 @@ footer {
 
 #root {
   max-width: 1280px;
-  margin: 12vh auto 12vh auto; 
+  margin: 12vh auto;
   text-align: center;
 }
 
 main {
-  height: calc(100vh - 24vh); 
+  height: calc(100vh - 24vh);
   background: white;
 }
 
@@ -77,4 +77,27 @@ main {
 
 .read-the-docs {
   color: #888;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: Georgia, 'Times New Roman', Times, serif;
+}
+
+.link_menu {
+  color: white;
 }

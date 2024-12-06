@@ -24,7 +24,7 @@ export default function CadastroCliente (){
         }).then(response => {
             if(response.status === 200){
                 alert("Cliente cadastrado com sucesso")
-                navigate("/")
+                navigate("/lista-cliente")
             }
             else{
                 alert("Erro ao cadastrar o Cliente")

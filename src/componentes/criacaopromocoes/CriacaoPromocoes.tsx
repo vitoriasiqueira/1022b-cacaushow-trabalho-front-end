@@ -28,7 +28,7 @@ export default function CriacaoPromocoes (){
         }).then(response => {
             if(response.status === 200){
                 alert("Promoção válida, aproveite!")
-                navigate("/")
+                navigate("/lista-promocoes")
             }
             else{
                 alert("Está promoção não é mais valida!")
@@ -60,7 +60,7 @@ export default function CriacaoPromocoes (){
                 <input type="text" name="Itemid" onChange={handleIdpromocao}/>
             </div>
             <div>
-                <label htmlFor="nomeproduto">Nome Produto: </label>
+                <label htmlFor="nomeproduto">Nome da promoção: </label>
                 <input type="text" name="nomeproduto" onChange={handleTitulo}/>
             </div>
             <div>
@@ -68,8 +68,8 @@ export default function CriacaoPromocoes (){
                 <input type="text" name="descricao" onChange={handleDescricao}/>
             </div>
             <div>
-                <label htmlFor="valiade">Validade: </label>
-                <input type="text" name="validade" onChange={handleValidade}/>
+                <label htmlFor="validade">Validade: </label>
+                <input type="date" name="validade" onChange={handleValidade}/>
             </div>
             <div>
                 <label htmlFor="cupom">Cupom: </label>
