@@ -18,7 +18,10 @@ export default function ListaPromocoes() {
       },[])
     return (
         <>
-         <Link to={"/criacao-promocoes"}>Promoções</Link>
+          <div className='container-link'>
+         <Link to={"/criacao-promocoes"} className="link-bonitao">Promoções</Link>
+         <Link to={"/alterar-promocoes"} className="link-bonitao">Alterar Promoções</Link>
+         </div>
             {promocoes.map(promo => {
                 return (
                     <div key={promo.idpromocao}className='promocoes-item'>

@@ -27,6 +27,7 @@ header {
 
 footer {
   bottom: 0;
+  background: #27120e;
 }
 
 #root {
@@ -78,7 +79,6 @@ main {
   color: #888;
 }
 
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -99,4 +99,124 @@ main {
 
 .link_menu {
   color: white;
+}
+
+.cliente-item{
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 33px;
+  box-shadow: 0 0 10px #f0f0f0;
+}
+.cliente-item>img{
+  height: auto;
+  width: 100%;
+}
+.container-cliente{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  
+}
+.container-cliente h1{
+  font-size: 2em;
+}
+
+.imagem-previa-upload{
+  width:300px;
+  height:auto;
+}
+
+.estoque-item{
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px #f0f0f0;
+}
+.estoque-item>img{
+  height: auto;
+  width: 100%;
+}
+.container-estoque{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  
+}
+.container-estoque h1{
+  font-size: 2em;
+}
+
+.imagem-previa-upload{
+  width:300px;
+  height:auto;
+}
+
+.pagamento-item{
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 0 10px #f0f0f0;
+}
+.pagamento-item>img{
+  height: auto;
+  width: 100%;
+}
+.container-pagamento{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  
+}
+.container-pagamento h1{
+  font-size: 2em;
+}
+
+.imagem-previa-upload{
+  width:300px;
+  height:auto;
+}
+
+.promocoes-item{
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 0 10px #f0f0f0;
+}
+.promocoes-item>img{
+  height: auto;
+  width: 100%;
+}
+.container-promocoes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  
+}
+.container-promocoes h1{
+  font-size: 2em;
+}
+
+.container-link{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:10px
+
+}
+.link-bonitao{
+  border: 1px solid #D0D0D0;
+  border-radius: 2px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #27120e;
+  width: 150px;
+  margin-bottom: 15px;
+}
+.link-bonitao:hover{
+  background-color: #eb8f06;
+}
+
+.imagem-previa-upload{
+  width:300px;
+  height:auto;
 }

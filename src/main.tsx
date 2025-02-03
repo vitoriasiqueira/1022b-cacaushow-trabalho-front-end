@@ -18,6 +18,11 @@ import ListaCliente from './componentes/listagemcliente/lista-cliente.tsx';
 import ListaPagamento from './componentes/listagempagamento/lista-pagamento.tsx';
 import ListaPromocoes from './componentes/listagempromocoes/lista-promocoes.tsx';
 import ListaEstoque from './componentes/listagemestoque/lista-estoque.tsx';
+import AlterarChocolate from './componentes/alterarchocolate/AlterarChocolate.tsx';
+import AlterarCliente from './componentes/alterarcliente/AlterarCliente.tsx';
+import AlterarEstoque from './componentes/alterarestoque/AlterarEstoque.tsx';
+import AlterarPagamento from './componentes/alterarpagamento/AlterarPagamento.tsx';
+import AlterarPromocoes from './componentes/alterarpromocoes/AlterarPromocoes.tsx';
 
 const router = createBrowserRouter([
   {
@@ -64,7 +69,28 @@ const router = createBrowserRouter([
     path: "/lista-estoque",
     element: <><Header/> <ListaEstoque/> <Footer/></>,
   },
+  {
+    path: "/alterar-chocolate",
+    element: <><Header/> <AlterarChocolate/> <Footer/></>,
+  },
+  {
+    path: "/alterar-cliente",
+    element: <><Header/> <AlterarCliente/> <Footer/></>,
+  },
+  {
+    path: "/alterar-estoque",
+    element: <><Header/> <AlterarEstoque/> <Footer/></>,
+  },
+  {
+    path: "/alterar-pagamento",
+    element: <><Header/> <AlterarPagamento/> <Footer/></>,
+  },
+  {
+    path: "/alterar-promocoes",
+    element: <><Header/> <AlterarPromocoes/> <Footer/></>,
+  },
 ]);
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
