@@ -17,7 +17,7 @@ function AlterarCliente(){
   
       function handleForm(event:FormEvent){
         event.preventDefault();
-        console.log("Tentei alterar os clientes");
+    
         const cliente = {
             nome: nome,
             cpf: cpf,

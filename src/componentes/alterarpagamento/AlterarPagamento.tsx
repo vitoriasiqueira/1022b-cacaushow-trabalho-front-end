@@ -80,7 +80,7 @@ function AlterarPagamento(){
                     <input type="text" name="valor" onChange={handleValor} />
                 </div>
                 <div>
-                    <input type="submit" value="Cadastrar" />
+                    <input type="submit" value="Alterar" />
                 </div>
             </form>
             </main>
