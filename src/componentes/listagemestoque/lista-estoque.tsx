@@ -32,9 +32,9 @@ export default function ListaEstoque() {
     return (
         <>
          <div className='container-link'>
-        <Link to={"/gestao-estoque"} className="link-bonitao">Estoque</Link>
-        <Link to={"/alterar-estoque"} className="link-bonitao">Atualizar Estoque</Link>
-        </div>
+         <Link to={"/cadastro-estoque"} className="link-bonitao">Estoques</Link>
+         <Link to={"/alterar-estoque"} className="link-bonitao">Alterar Estoques</Link>
+         </div>
             {estoque.map(esto => {
                 return (
                     <div key={esto.itemId}className='estoque-item'>
@@ -42,8 +42,8 @@ export default function ListaEstoque() {
                     <p>{esto.quantidade}</p>
                     <p>{esto.localizacao}</p>
                     <button onClick={()=>{handleExcluir(esto.itemId)}}>Excluir</button>
-                    <Link to={`/alterar-estoque/${esto.itemId}`}>Alterar</Link>
-                    </div>
+              <Link to={`/alterar-estoque/${esto.itemId}`}>Alterar</Link>
+                  </div>
                 )
             })}
         </>

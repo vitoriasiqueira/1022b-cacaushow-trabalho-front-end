@@ -54,7 +54,7 @@
         return(
             <>
             <div className='container-link'>
-                    <Link to={"/alterar-promocoes"} className="link-bonitao">Alterar Promoções</Link>
+                <Link to={"/alterar-promocoes"} className="link-bonitao">Alterar Promoções</Link>
                     </div>
             <h1>Criar Promoção</h1>
             <form onSubmit={handleForm}>

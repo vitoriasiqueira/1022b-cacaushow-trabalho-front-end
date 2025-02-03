@@ -7,7 +7,8 @@ type PagamentoType = {
     descricao:string,
     valor:string
   }
- export default function ListaPagamento() {
+export default function ListaPagamento() {
+    
     const [pagamento, setPagamento] = useState<PagamentoType[]>([])
     useEffect(()=>{
         fetch("https://one022b-cacaushow-trabalho.onrender.com/pagamento")
@@ -28,20 +29,20 @@ type PagamentoType = {
           }
         })
       }
-      return (
+    return (
         <>
          <div className='container-link'>
-         <Link to={"/cadastro-pagamento"} className="link-bonitao">Pagamento</Link>
-         <Link to={"/alterar-pagamento"} className="link-bonitao">Alterar Pagamento</Link>
+         <Link to={"/cadastro-pagamento"} className="link-bonitao">Pagamentos</Link>
+         <Link to={"/alterar-pagamento"} className="link-bonitao">Alterar Pagamentos</Link>
          </div>
             {pagamento.map(paga => {
                 return (
-                    <div key={paga.idpagamento}className='pagamento-item'>
+                    <div key={paga.idpagamento}className='cliente-item'>
                     <h1>{paga.formapag}</h1>
                     <p>{paga.descricao}</p>
                     <p>{paga.valor}</p>
                     <button onClick={()=>{handleExcluir(paga.idpagamento)}}>Excluir</button>
-                    <Link to={`/alterar-pagamento/${paga.idpagamento}`}>Alterar</Link>
+              <Link to={`/alterar-pagamento/${paga.idpagamento}`}>Alterar</Link>
                   </div>
                 )
             })}

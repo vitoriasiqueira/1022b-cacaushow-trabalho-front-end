@@ -4,7 +4,7 @@ import { FormEvent, useState, ChangeEvent, useEffect } from "react";
 function AlterarPromocoes(){
     const {idpromocao} = useParams()
     useEffect(()=>{
-        fetch(`https://one022b-cacaushow-trabalho.onrender.com/cliente/${idpromocao}`)
+        fetch(`https://one022b-cacaushow-trabalho.onrender.com/promocao/${idpromocao}`)
         .then(resposta=>resposta.json())
         .then(dados=>{
             setTitulo(dados.titulo)
@@ -28,7 +28,7 @@ function AlterarPromocoes(){
            validade: validade,
            cupom: cupom
         }
-        fetch(`https://one022b-cacaushow-trabalho.onrender.com/cliente/${idpromocao}`,{
+        fetch(`https://one022b-cacaushow-trabalho.onrender.com/promocao/${idpromocao}`,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
