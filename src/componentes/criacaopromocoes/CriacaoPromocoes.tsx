@@ -1,5 +1,5 @@
     import { ChangeEvent, FormEvent, useState } from "react";
-    import { Link, useNavigate } from "react-router-dom";
+    import { useNavigate } from "react-router-dom";
 
     export default function CriacaoPromocoes (){
         const navigate = useNavigate();
@@ -53,9 +53,6 @@
 
         return(
             <>
-            <div className='container-link'>
-                <Link to={"/alterar-promocoes"} className="link-bonitao">Alterar Promoções</Link>
-                    </div>
             <h1>Criar Promoção</h1>
             <form onSubmit={handleForm}>
                 <div>

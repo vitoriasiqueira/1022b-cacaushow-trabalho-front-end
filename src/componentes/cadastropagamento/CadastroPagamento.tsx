@@ -1,5 +1,5 @@
     import { FormEvent, useState, ChangeEvent } from "react";
-    import { Link, useNavigate } from "react-router-dom";
+    import { useNavigate } from "react-router-dom";
 
     export default function CadastroPagamento(){
         const navigate = useNavigate();
@@ -47,9 +47,6 @@
         }
         return(
             <> 
-            <div className='container-link'>
-                    <Link to={"/alterar-pagamento"} className="link-bonitao">Alterar Pagamento</Link>
-                    </div>
                 <h1>Registrar Pagamento</h1>
                 <form onSubmit={handleForm}>
                     <div>

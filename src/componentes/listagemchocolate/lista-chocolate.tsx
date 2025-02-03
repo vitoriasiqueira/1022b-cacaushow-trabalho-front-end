@@ -21,7 +21,6 @@ export default function ListaChocolate() {
         <>
         <div className='container-link'>
           <Link to={"/cadastro-chocolate"} className="link-bonitao">Chocolates</Link>
-          <Link to={"/alterar-chocolate"} className="link-bonitao">Alterar Chocolates</Link>
           </div>
             {chocolates.map(choco => {
                 return (

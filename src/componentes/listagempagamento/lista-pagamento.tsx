@@ -33,7 +33,6 @@ export default function ListaPagamento() {
         <>
          <div className='container-link'>
          <Link to={"/cadastro-pagamento"} className="link-bonitao">Pagamentos</Link>
-         <Link to={"/alterar-pagamento"} className="link-bonitao">Alterar Pagamentos</Link>
          </div>
             {pagamento.map(paga => {
                 return (

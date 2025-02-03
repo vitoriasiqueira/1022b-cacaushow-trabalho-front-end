@@ -32,8 +32,7 @@ export default function ListaEstoque() {
     return (
         <>
          <div className='container-link'>
-         <Link to={"/cadastro-estoque"} className="link-bonitao">Estoques</Link>
-         <Link to={"/alterar-estoque"} className="link-bonitao">Alterar Estoques</Link>
+         <Link to={"/gestao-estoque"} className="link-bonitao">Estoques</Link>
          </div>
             {estoque.map(esto => {
                 return (

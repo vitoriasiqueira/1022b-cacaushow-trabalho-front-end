@@ -1,5 +1,5 @@
     import { ChangeEvent, FormEvent, useState } from "react";
-    import { Link, useNavigate } from "react-router-dom";
+    import { useNavigate } from "react-router-dom";
 
     export default function GestaoEstoque (){
         const navigate = useNavigate();
@@ -48,9 +48,6 @@
 
         return(
             <>
-            <div className='container-link'>
-                    <Link to={"/alterar-estoque"} className="link-bonitao">Alterar Estoque</Link>
-                    </div>
             <h1>Cadastrar Estoque</h1>
             <form onSubmit={handleForm}>
                 <div>

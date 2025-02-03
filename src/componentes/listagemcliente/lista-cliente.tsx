@@ -32,14 +32,13 @@ export default function ListaCliente() {
         <>
          <div className='container-link'>
          <Link to={"/cadastro-cliente"} className="link-bonitao">Clientes</Link>
-         <Link to={"/alterar-cliente"} className="link-bonitao">Alterar Clientes</Link>
          </div>
             {cliente.map(clien => {
                 return (
                     <div key={clien.clienteId}className='cliente-item'>
                     <h1>{clien.nome}</h1>
                     <p>{clien.cpf}</p>
-                    <button onClick={()=>{handleExcluir(clien.clienteId)}}>Excluir</button>
+                <button onClick={()=>{handleExcluir(clien.clienteId)}}>Excluir</button>
               <Link to={`/alterar-cliente/${clien.clienteId}`}>Alterar</Link>
                   </div>
                 )

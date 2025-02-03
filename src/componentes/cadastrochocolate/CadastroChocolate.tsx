@@ -1,5 +1,5 @@
 import { FormEvent, useState, ChangeEvent } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function CadastroChocolate(){
     const navigate = useNavigate();
@@ -54,9 +54,6 @@ export default function CadastroChocolate(){
 
     return(
         <>
-        <div className='container-link'>
-                <Link to={"/alterar-chocolate"} className="link-bonitao">Alterar Chocolate</Link>
-                </div>
             <h1>Cadastrar Chocolates</h1>
             <form onSubmit={handleForm}>
                 <div>

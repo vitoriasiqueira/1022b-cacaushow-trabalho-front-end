@@ -17,7 +17,7 @@ function AlterarCliente(){
   
       function handleForm(event:FormEvent){
         event.preventDefault();
-    
+     
         const cliente = {
             nome: nome,
             cpf: cpf,
