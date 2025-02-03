@@ -67,11 +67,11 @@ function AlterarPromocoes(){
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="itemid">Item ID: </label>
-                <input type="text" name="Itemid" value={idpromocao} readOnly/>
+                <input type="text" name="idpromocao" value={idpromocao} readOnly/>
             </div>
             <div>
                 <label htmlFor="nomeproduto">Nome da promoção: </label>
-                <input type="text" name="nomeproduto" value={titulo}  onChange={handleTitulo}/>
+                <input type="text" name="titulo" value={titulo}  onChange={handleTitulo}/>
             </div>
             <div>
                 <label htmlFor="descricao">Descrição: </label>

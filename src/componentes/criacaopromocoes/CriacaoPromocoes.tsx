@@ -3,7 +3,7 @@
 
     export default function CriacaoPromocoes (){
         const navigate = useNavigate();
-        const [idPromocao,setIdpromocao] = useState("")
+        const [idpromocao,setIdpromocao] = useState("")
         const [titulo,setTitulo] = useState("")
         const [descricao,setDescricao] = useState("")
         const [validade,setValidade] = useState("")
@@ -13,7 +13,7 @@
             event.preventDefault();
             console.log("Criacao de Promoções");
             const promocoes = {
-                idPromocao: idPromocao,
+                idPromocao: idpromocao,
                 titulo: titulo,
                 descricao: descricao,
                 validade: validade,
@@ -59,12 +59,12 @@
             <h1>Criar Promoção</h1>
             <form onSubmit={handleForm}>
                 <div>
-                    <label htmlFor="itemid">Item ID: </label>
-                    <input type="text" name="Itemid" onChange={handleIdpromocao}/>
+                    <label htmlFor="idpromocao">Item ID: </label>
+                    <input type="text" name="idpromocao" onChange={handleIdpromocao}/>
                 </div>
                 <div>
-                    <label htmlFor="nomeproduto">Nome da promoção: </label>
-                    <input type="text" name="nomeproduto" onChange={handleTitulo}/>
+                    <label htmlFor="titulo">Título: </label>
+                    <input type="text" name="titulo" onChange={handleTitulo}/>
                 </div>
                 <div>
                     <label htmlFor="descricao">Descrição: </label>

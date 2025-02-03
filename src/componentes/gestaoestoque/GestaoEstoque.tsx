@@ -54,12 +54,12 @@
             <h1>Cadastrar Estoque</h1>
             <form onSubmit={handleForm}>
                 <div>
-                    <label htmlFor="itemid">Item ID: </label>
-                    <input type="text" name="Itemid" onChange={handleItemid}/>
+                    <label htmlFor="itemId">Item ID: </label>
+                    <input type="text" name="itemId" onChange={handleItemid}/>
                 </div>
                 <div>
-                    <label htmlFor="nomeproduto">Nome do Produto: </label>
-                    <input type="text" name="nomeproduto" onChange={handleNomeProduto}/>
+                    <label htmlFor="nomeProduto">Nome do Produto: </label>
+                    <input type="text" name="nomeProduto" onChange={handleNomeProduto}/>
                 </div>
                 <div>
                     <label htmlFor="quantidade">Quantidade: </label>

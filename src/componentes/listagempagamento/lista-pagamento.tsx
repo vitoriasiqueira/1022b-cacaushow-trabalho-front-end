@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 type PagamentoType = {
-    Idpagamento:number,
+    idpagamento:number,
     formapag:string,
     descricao:string,
     valor:string
@@ -14,8 +14,8 @@ type PagamentoType = {
         .then(resposta=>resposta.json())
         .then(dados=>setPagamento(dados))
       },[])
-      function handleExcluir(Idpagamento:number){
-        fetch(`https://one022b-cacaushow-trabalho.onrender.com/pagamento/${Idpagamento}`,{
+      function handleExcluir(idpagamento:number){
+        fetch(`https://one022b-cacaushow-trabalho.onrender.com/pagamento/${idpagamento}`,{
           method:"DELETE"
         })
         .then(resposta=>{
@@ -36,12 +36,12 @@ type PagamentoType = {
          </div>
             {pagamento.map(paga => {
                 return (
-                    <div key={paga.Idpagamento}className='pagamento-item'>
+                    <div key={paga.idpagamento}className='pagamento-item'>
                     <h1>{paga.formapag}</h1>
                     <p>{paga.descricao}</p>
                     <p>{paga.valor}</p>
-                    <button onClick={()=>{handleExcluir(paga.Idpagamento)}}>Excluir</button>
-                    <Link to={`/alterar-pagamento/${paga.Idpagamento}`}>Alterar</Link>
+                    <button onClick={()=>{handleExcluir(paga.idpagamento)}}>Excluir</button>
+                    <Link to={`/alterar-pagamento/${paga.idpagamento}`}>Alterar</Link>
                   </div>
                 )
             })}

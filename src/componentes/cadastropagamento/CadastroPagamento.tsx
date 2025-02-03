@@ -54,7 +54,7 @@
                 <form onSubmit={handleForm}>
                     <div>
                         <label htmlFor="idpagamento">ID Pagamento: </label>
-                        <input type="text" name="Idpagamento" onChange={handleIdpagamento} />
+                        <input type="text" name="idpagamento" onChange={handleIdpagamento} />
                     </div>
                     <div>
                         <label htmlFor="formapag">Forma de Pagamento: </label>
