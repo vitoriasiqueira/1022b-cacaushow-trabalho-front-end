@@ -1,6 +1,7 @@
   import { useEffect, useState } from 'react'
-  import './App.css'
   import { Link } from 'react-router-dom';
+
+  import './App.css'
 
   type ChocolateType = {
     id:number,
@@ -15,7 +16,7 @@
 
     //useEffect(O Que fazer, Quando fazer)
     useEffect(()=>{
-      fetch(`https://one022b-cacaushow-trabalho.onrender.com/chocolates`)
+      fetch("https://one022b-cacaushow-trabalho.onrender.com/chocolates")
       .then(resposta=>resposta.json())
       .then(dados=>setChocolates(dados))
     },[]); 

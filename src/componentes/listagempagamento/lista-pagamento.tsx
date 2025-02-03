@@ -14,6 +14,20 @@ type PagamentoType = {
         .then(resposta=>resposta.json())
         .then(dados=>setPagamento(dados))
       },[])
+      function handleExcluir(Idpagamento:number){
+        fetch(`https://one022b-cacaushow-trabalho.onrender.com/pagamento/${Idpagamento}`,{
+          method:"DELETE"
+        })
+        .then(resposta=>{
+          if(resposta.status==200){
+            alert("Excluído com sucesso")
+            window.location.reload()
+          }
+          else{
+            alert("Erro ao excluir")
+          }
+        })
+      }
       return (
         <>
          <div className='container-link'>
@@ -26,6 +40,8 @@ type PagamentoType = {
                     <h1>{paga.formapag}</h1>
                     <p>{paga.descricao}</p>
                     <p>{paga.valor}</p>
+                    <button onClick={()=>{handleExcluir(paga.Idpagamento)}}>Excluir</button>
+                    <Link to={`/alterar-pagamento/${paga.Idpagamento}`}>Alterar</Link>
                   </div>
                 )
             })}

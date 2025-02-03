@@ -16,6 +16,20 @@ export default function ListaPromocoes() {
         .then(resposta=>resposta.json())
         .then(dados=>setPromocoes(dados))
       },[])
+      function handleExcluir(idpromocao:number){
+        fetch(`https://one022b-cacaushow-trabalho.onrender.com/promocoes/${idpromocao}`,{
+          method:"DELETE"
+        })
+        .then(resposta=>{
+          if(resposta.status==200){
+            alert("Excluído com sucesso")
+            window.location.reload()
+          }
+          else{
+            alert("Erro ao excluir")
+          }
+        })
+      }
     return (
         <>
           <div className='container-link'>
@@ -29,6 +43,8 @@ export default function ListaPromocoes() {
                     <p>{promo.descricao}</p>
                     <p>{new Date(promo.validade).getDate()+1}/{new Date(promo.validade).getMonth()+1}/{new Date(promo.validade).getFullYear()}</p>
                     <p>{promo.cupom}</p>
+                    <button onClick={()=>{handleExcluir(promo.idpromocao)}}>Excluir</button>
+                    <Link to={`/alterar-promocoes/${promo.idpromocao}`}>Alterar</Link>
                   </div>
                 )
             })}

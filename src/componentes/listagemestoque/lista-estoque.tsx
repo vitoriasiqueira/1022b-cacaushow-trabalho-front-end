@@ -15,6 +15,20 @@ export default function ListaEstoque() {
         .then(resposta=>resposta.json())
         .then(dados=>setEstoque(dados))
       },[])
+      function handleExcluir(itemId:number){
+        fetch(`https://one022b-cacaushow-trabalho.onrender.com/estoque/${itemId}`,{
+          method:"DELETE"
+        })
+        .then(resposta=>{
+          if(resposta.status==200){
+            alert("Excluído com sucesso")
+            window.location.reload()
+          }
+          else{
+            alert("Erro ao excluir")
+          }
+        })
+      }
     return (
         <>
          <div className='container-link'>
@@ -27,6 +41,8 @@ export default function ListaEstoque() {
                     <h1>{esto.nomeProduto}</h1>
                     <p>{esto.quantidade}</p>
                     <p>{esto.localizacao}</p>
+                    <button onClick={()=>{handleExcluir(esto.itemId)}}>Excluir</button>
+                    <Link to={`/alterar-estoque/${esto.itemId}`}>Alterar</Link>
                     </div>
                 )
             })}
